@@ -10,6 +10,7 @@ CREATE TABLE employee (
     hire_date DATE
 );
 
+
 CREATE TABLE payroll (
     id INT PRIMARY KEY AUTO_INCREMENT,
     employee_id INT,
