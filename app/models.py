@@ -6,6 +6,8 @@ class Employee(db.Model):
     position = db.Column(db.String(50), nullable=False)
     salary = db.Column(db.Numeric(10, 2), nullable=False)
     hire_date = db.Column(db.Date, default=db.func.current_date())
+    is_active = db.Column(db.Boolean, default=True)
+
 
 class Payroll(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -1,0 +1,28 @@
+<!-- update_employee.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Update Employee</title>
+</head>
+<body>
+    <h1>Update Employee</h1>
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ employee.name }}" required><br>
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" value="{{ employee.position }}" required><br>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" value="{{ employee.salary }}" step="0.01" required><br>
+
+        <label for="is_active">Active:</label>
+        <input type="checkbox" id="is_active" name="is_active" {% if employee.is_active %}checked{% endif %}><br>
+
+        <button type="submit">Update Employee</button>
+    </form>
+</body>
+</html>

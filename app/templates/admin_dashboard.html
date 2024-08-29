@@ -1,14 +1,21 @@
-<!-- payroll_report.html -->
+<!-- admin_dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Payroll Report</title>
+    <title>Admin Dashboard</title>
 </head>
 <body>
-    <h1>Payroll Report</h1>
+    <h1>Admin Dashboard</h1>
+    <h2>Employees</h2>
+    <ul>
+        {% for employee in employees %}
+            <li>{{ employee.name }} - {{ employee.position }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Payrolls</h2>
     <ul>
         {% for payroll in payrolls %}
             <li>{{ payroll.employee.name }}: ${{ payroll.amount }} on {{ payroll.date }}</li>
