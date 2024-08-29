@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>EffiPay - Payroll Management System</title>
+</head>
+<body>
+    <h1>Welcome to EffiPay</h1>
+    <a href="{{ url_for('add_employee') }}">Add Employee</a>
+    <a href="{{ url_for('view_employees') }}">View Employees</a>
+    <a href="{{ url_for('generate_payroll') }}">Generate Payroll</a>
+    <a href="{{ url_for('login') }}">Login</a>
+</body>
+</html>
